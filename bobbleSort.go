@@ -2,27 +2,27 @@ package main
 
 func main() {
 
-	gelen := make([]int, 0, 10)
-	gelen = append(gelen, 6, 4, 1, 3)
+	slice := make([]int, 0, 10)
+	slice = append(slice, 6, 4, 1, 3, 8, 2, 9, 0, 7, 5)
 
-	BobbleSort(gelen)
+	BobbleSort(slice)
 
 }
 
-func BobbleSort(gelen []int) {
+func BobbleSort(slice []int) {
 
-	for i := 0; i < len(gelen); i++ {
+	for i := 0; i < len(slice); i++ {
 
-		for j := 0; j < len(gelen)-1-i; j++ {
-			if gelen[j] > gelen[j+1] {
-				temp := gelen[j]
-				gelen[j] = gelen[j+1]
-				gelen[j+1] = temp
+		for j := 0; j < len(slice)-1-i; j++ {
+			if slice[j] > slice[j+1] {
+				temp := slice[j]
+				slice[j] = slice[j+1]
+				slice[j+1] = temp
 			}
 		}
 	}
-	for k := 0; k < len(gelen); k++ {
-		print(gelen[k])
+	for k := 0; k < len(slice); k++ {
+		print(slice[k])
 		print("\n")
 	}
 }
