@@ -5,11 +5,11 @@ func main() {
 	slice := make([]int, 0, 10)
 	slice = append(slice, 6, 4, 1, 3, 8, 2, 9, 0, 7, 5)
 
-	BobbleSort(slice)
+	BubbleSort(slice)
 
 }
 
-func BobbleSort(slice []int) {
+func BubbleSort(slice []int) {
 
 	for i := 0; i < len(slice); i++ {
 
