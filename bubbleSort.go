@@ -15,9 +15,8 @@ func BubbleSort(slice []int) {
 
 		for j := 0; j < len(slice)-1-i; j++ {
 			if slice[j] > slice[j+1] {
-				temp := slice[j]
-				slice[j] = slice[j+1]
-				slice[j+1] = temp
+				Swap(&slice[j], &slice[j+1])
+
 			}
 		}
 	}
@@ -25,4 +24,11 @@ func BubbleSort(slice []int) {
 		print(slice[k])
 		print("\n")
 	}
+}
+
+// we dont use temp
+func Swap(first, second *int) {
+
+	*first, *second = *second, *first
+
 }
